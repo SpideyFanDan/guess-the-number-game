@@ -19,7 +19,6 @@ let correctNumber = getRandomNumber();
 window.onload = function () {
 	document.getElementById('number-submit').addEventListener('click', playGame);
 	document.getElementById('restart-game').addEventListener('click', initGame);
-	console.log(correctNumber);
 };
 
 /**
@@ -53,6 +52,10 @@ function displayResult(numberGuess) {
  */
 function initGame() {
 	// *CODE GOES BELOW HERE *
+	correctNumber = getRandomNumber();
+	document.getElementById('result').innerHTML = '';
+	guesses = [];
+	displayHistory();
 }
 
 /**
